@@ -15,11 +15,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        arbolavl.cpp \
         estudiante.cpp \
         lista.cpp \
         main.cpp \
         matriz.cpp \
         nodo.cpp \
+        nodoavl.cpp \
         nodomatriz.cpp
 
 # Default rules for deployment.
@@ -28,8 +30,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    arbolavl.h \
     estudiante.h \
     lista.h \
     matriz.h \
     nodo.h \
+    nodoavl.h \
     nodomatriz.h

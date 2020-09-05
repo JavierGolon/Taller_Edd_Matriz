@@ -2,6 +2,7 @@
 #include "lista.h"
 #include "estudiante.h"
 #include "matriz.h"
+#include "arbolavl.h"
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -39,7 +40,7 @@ int main(int argc, char *argv[])
 
     // crear grado
      // matriz
-
+    /*
     matriz * nuevamatriz = new matriz();
 
 
@@ -55,7 +56,27 @@ int main(int argc, char *argv[])
     cout<<nuevamatriz->recorrerMatriz()<<endl;
     cout<<nuevamatriz->recorrerMatriz()<<endl;
     nuevamatriz->reporteMatriz();
+    */
 
+    //100,29,71,82,48,39,101,22,46, 17,3,20,25,10
+    cout<<"en arbol"<<endl;
+    ArbolAvl *arbol = new ArbolAvl();
+    arbol->insertar(100);
+    arbol->insertar(29);
+    arbol->insertar(71);
+    arbol->insertar(82);
+    arbol->insertar(48);
+    arbol->insertar(39);
+    arbol->insertar(101);
+    arbol->insertar(22);
+    arbol->insertar(46);
+    arbol->insertar(17);
+    arbol->insertar(3);
+    arbol->insertar(20);
+    arbol->insertar(25);
+    arbol->insertar(10);
+
+    arbol->ObtenerGrafo(arbol->Oraiz());
 
 
     return a.exec();
